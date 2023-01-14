@@ -12,9 +12,8 @@ body {
   height: 100%;
   width: 100%;
   background-color: #e5e5e5;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  display: grid;
+  place-items: center;
 }
 .first-container {
   width: 100%;
@@ -149,7 +148,7 @@ body {
     font-size: 1rem;
     line-height: 1.625rem;
   }
-  .number2 img{
+  .number2 img {
     display: none;
   }
 }
@@ -163,7 +162,7 @@ body {
     font-size: 0.75rem;
     line-height: 1rem;
   }
-  .number2 img{
+  .number2 img {
     display: none;
   }
 }
@@ -358,20 +357,18 @@ body {
     grid-template-columns: 1fr;
   }
   .number6--img {
-    max-width: 500px;
-    height: 100%;
+    max-width: 300px;
   }
 }
 /* MOBILE */
-/* @media (max-width: 576px) {
-  .number4 {
+@media (max-width: 576px) {
+  .number6 {
     grid-template-columns: 1fr;
   }
-  .n3-h3 {
-    font-size: 0.6rem;
-    line-height: 0.75rem;
+  .number6--img {
+    max-width: 300px;
   }
-} */
+}
 
 /* NUMBER 7 */
 
@@ -384,11 +381,10 @@ body {
 }
 
 .number7 {
-  display: flex;
+  display: grid;
   padding: 93px 0 0 0;
   gap: 15px;
-  display: flex;
-  align-items: center;
+  place-items: center;
 }
 
 .n7-p {
@@ -413,13 +409,17 @@ body {
 /* NUMBER 9 */
 
 .number9 {
-  display: flex;
-  justify-content: space-between;
+  width: 100%;
+
   margin-bottom: 70px;
 }
 .title9 {
   display: grid;
-  grid-template-columns: repeat(4, 50%);
+  grid-template-columns: repeat(4, 1fr) auto;
+  grid-template-rows: repeat(2, 1fr);
+}
+.foot-h4{
+  display: inline-block;  
 }
 input {
   padding: 18px 24px;
@@ -461,4 +461,6 @@ input {
 .title10 {
   display: grid;
   grid-template-columns: repeat(3, 15%);
+  column-gap: 3rem;
+  row-gap: 1rem;
 }
