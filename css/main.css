@@ -11,6 +11,8 @@ html {
 body {
   height: 100%;
   background-color: #e5e5e5;
+  display: grid;
+  place-items: center;
   /* font-family: "Libre Franklin", sans-serif; */
   /* font-family: "Source Serif Pro", serif; */
 }
@@ -24,7 +26,6 @@ body {
 .container {
   width: 100%;
   max-width: 1440px;
-  margin: 0 auto;
   background-color: #ffffff;
   color: #000000;
   padding: 0 120px;
